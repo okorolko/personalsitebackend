@@ -1,0 +1,102 @@
+doctype html
+html(lang='ru-RU')
+  include common/_head
+  body
+    .admin-wrapper
+      .modal-container
+        .modal-block
+          .modal-block-text Added
+          .modal-block-button
+            button.modalOk.admin-button.admin-close Close
+      .modal-container
+        .modal-block
+          .modal-block-text There was a problem
+          .modal-block-button
+            button.modalOk.admin-button Close
+      header.admin_header
+        .admin_header_text Admin Panel
+        .admin_header_return Back to Main Page
+      section
+        .tabs__control
+          ul.tabs__control-list
+            li(data-class="0").tabs__control-item
+              span.tabs__control-link ABOUT
+            li(data-class="1").tabs__control-item
+              span.tabs__control-link BLOG
+            li(data-class="2").tabs__control-item
+              span.tabs__control-link WORKS
+        .tabs__list
+          ul.tabs__list-list
+            li.tabs__list-item.activeTab
+              .tabs__list-container
+                h1 About
+                .tabs__list-top
+                  .tabs__list_block.tabs__list_block-left
+                    h2.tabs__list-header Frontend
+                    .tabs__list_block-elem
+                      span.tabs__list-text html
+                      span.tabs__list-percent %
+                      input(type='number' max='3').tabs__list-input
+                    .tabs__list_block-elem
+                      span.tabs__list-text CSS
+                      span.tabs__list-percent %
+                      input(type='number' max='3').tabs__list-input
+                    .tabs__list_block-elem
+                      span.tabs__list-text Javascript
+                      span.tabs__list-percent %
+                      input(type='number' max='3').tabs__list-input
+                    .tabs__list_block-elem
+                      span.tabs__list-text Sass
+                      span.tabs__list-percent %
+                      input(type='number' max='3').tabs__list-input
+                  .tabs__list_block.tabs__list_block-right
+                    h2.tabs__list-header Workflow
+                    .tabs__list_block-elem
+                      span.tabs__list-text Git
+                      span.tabs__list-percent %
+                      input(type='number' max='3').tabs__list-input
+                    .tabs__list_block-elem
+                      span.tabs__list-text Gulp
+                      span.tabs__list-percent %
+                      input(type='number' max='3').tabs__list-input
+                    .tabs__list_block-elem
+                      span.tabs__list-text Bower
+                      span.tabs__list-percent %
+                      input(type='number' max='3').tabs__list-input
+                .tabs__list_block
+                  h2.tabs__list-header Backend
+                  .tabs__list_block-elem
+                    span.tabs__list-text PHP
+                    span.tabs__list-percent %
+                    input(type='number' max='3').tabs__list-input
+                  .tabs__list_block-elem
+                    span.tabs__list-text Node.js
+                    span.tabs__list-percent %
+                    input(type='number' max='3').tabs__list-input
+                  .tabs__list_block-elem
+                    span.tabs__list-text Mongo.db
+                    span.tabs__list-percent %
+                    input(type='number' max='3').tabs__list-input
+                  button#saveDiagram.admin-button Save
+            li.tabs__list-item
+              .tabs__list-container
+                h1 Blog
+                .blog__container
+                  h2 Add Blog Post
+                  form#blogPost
+                    input(type="text" placeholder="Title" name='title').blog__name
+                    input(type="text" placeholder="Date" name='date').blog__name
+                    textarea(rows="6" cols="50" placeholder="Content" name='content').blog__article
+                    button#addBlogPost.admin-button Add
+            li.tabs__list-item
+              .tabs__list-container
+                h1 Works
+                .admin_works__container
+                  h2 Add Project
+                  form#uploadForm
+                    input(type="text" placeholder="Title" name='title').admin_works__text-field
+                    input(type="text" placeholder="Technologies" name='tech').admin_works__text-field
+                    input(type='file', name='photo')#file-4.inputfile.inputfile-4
+                    label(for='file-4')
+                      span Load Picture
+                    button#addWork.admin-button Add

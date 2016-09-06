@@ -1,0 +1,79 @@
+extends main
+block title
+  svg(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 1000 85', preserveaspectratio='none').about_triangle
+    polygon(points='0,0   0,86   500.8,86   500.8,75.5')#about_triangle_left
+    polygon(points='1000,0   1000,86   500,86   500,75.5')#about_triangle_right
+block content
+  .aboutme
+    section.aboutme-section
+      h2.aboutme-header ABOUT ME
+      img(src='/assets/img/ava_big.jpg').aboutme-image
+      h3.aboutme-header-who WHO AM I
+      .aboutme-header_who_text
+        p(class='aboutme-text').
+          I'm a Front End Developer from Saint-Petersburg, Russia.
+          I enjoy turning complex problems into simple and develop cutting edge websites .
+          When I'm not coding or pushing pixels,
+          you'll find me playing ice hockey or trekking.
+        p(class='aboutme-text').
+          This website was built during my education in LoftsSchool. Soon I'll fill
+          it with content.
+    section.graphs-section
+      h2.graphs-header How you can benefit from me
+      p(class='graphs-text').
+        I'm into Front End Development but I can also fulfil some simple Backend task.
+      .skills-section
+        .skills__name Frontend
+        .skills__elems
+          each  val, index in {'html': 'HTML5', 'css': 'CSS3', 'js': 'JavaScript & jQuery', 'sass': 'Sass & Jade'}
+            .skills__elems_one
+              svg.g-circles(width='110', height='110')
+                circle(r='44', cx='55', cy='55', stroke='#ccc', fill='none')
+                circle.sector(transform='rotate(-90 135 135)' r='44', cx='215', cy='55', stroke='crimson', data-diagram= index)
+              .skills__elems_one_text= val
+        .skills__name Backend
+        .skills__elems
+          each  val, index in {'nodejs': 'Node.js','mongodb': 'Mongo.db','php': 'PHP'}
+            .skills__elems_one
+              svg.g-circles(width='110', height='110')
+                circle(r='44', cx='55', cy='55', stroke='#ccc', fill='none')
+                circle.sector(transform='rotate(-90 135 135)' r='44', cx='215', cy='55', stroke='crimson', data-diagram= index)
+              .skills__elems_one_text= val
+        .skills__name WorkFlow
+        .skills__elems
+          each  val, index in {'git': 'Git','gulp': 'Gulp','bower': 'Bower'}
+            .skills__elems_one
+              svg.g-circles(width='110', height='110')
+                circle(r='44', cx='55', cy='55', stroke='#ccc', fill='none')
+                circle.sector(transform='rotate(-90 135 135)' r='44', cx='215', cy='55', stroke='crimson', data-diagram= index)
+              .skills__elems_one_text= val
+  .map__container
+    div#map
+    .contacts
+      h2.contacts__header CONTACTS
+      .contacts__elems
+        ul
+          li
+            a(class='contacts__elems_link', href='#')
+              .contacts__elems_item
+                svg.contacts__elem_icon
+                  use(xlink:href='assets/img/icons/skype.svg#skype')
+                span.contacts__elem_span skype
+          li
+            a(class='contacts__elems_link', href='#')
+              .contacts__elems_item
+                svg.contacts__elem_icon
+                  use(xlink:href='assets/img/icons/envelope.svg#envelope')
+                span.contacts__elem_span olegk101@gmail.com
+          li
+            a(class='contacts__elems_link', href='#')
+              .contacts__elems_item
+                svg.contacts__elem_icon
+                  use(xlink:href='assets/img/icons/phone.svg#phone')
+                span.contacts__elem_span +7 921 744 1764
+          li
+            a(class='contacts__elems_link', href='#')
+              .contacts__elems_item
+                svg.contacts__elem_icon
+                  use(xlink:href='assets/img/icons/map_marker.svg#map_marker')
+                span.contacts__elem_span Saint-Petersburg, Russia

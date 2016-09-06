@@ -1,0 +1,22 @@
+{
+  "port": 4000,
+  "mongoose": {
+    "uri": "mongodb://localhost/test",
+    "options": {
+      "socketOptions": {
+        "keepAlive": 1
+      }
+    }
+  },
+  "session": {
+    "secret": "bronze56k",
+    "key": "sid",
+    "cookie": {
+      "path": "/",
+      "httpOnly": true,
+      "maxAge": null
+    },
+    "resave": false,
+    "saveUninitialized": false
+  }
+}

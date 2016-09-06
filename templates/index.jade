@@ -1,0 +1,104 @@
+doctype html
+html(lang='ru-RU')
+  include common/_head
+  body
+    <!--[if lt IE 9]>
+    <p class="browsehappy">You use <strong>an old</strong> browser. Please <a href="http://browsehappy.com/">update it</a></p>
+    <![endif]-->
+    .preloader_container
+      .preloader
+        .outer-circle
+        .middle-circle
+        .inner-circle
+        .preloader_text 0
+    .wrapper-welcome
+      .index-modal-container#index-modal-container-robots
+        .index-modal-block
+          .index-modal-block-text Robots are not welcome here
+          button.index-modal-block-button#index-modal-robots-ok Ok
+      .index-modal-container#index-modal-container-field
+        .index-modal-block
+          .index-modal-block-text Empty fields remaining
+          button.index-modal-block-button#index-modal-field-ok Ok
+      .parallax
+        .parallax__layer
+          img(src='assets/img/parallax/layer_009.jpg').parallax__layer-img
+        .parallax__layer
+          img(src='assets/img/parallax/layer_008.png').parallax__layer-img
+        .parallax__layer
+          img(src='assets/img/parallax/layer_007.png').parallax__layer-img
+        .parallax__layer
+          img(src='assets/img/parallax/layer_006.png').parallax__layer-img
+        .parallax__layer
+          img(src='assets/img/parallax/layer_005.png').parallax__layer-img
+        .parallax__layer
+          img(src='assets/img/parallax/layer_004.png').parallax__layer-img
+        .parallax__layer
+          img(src='assets/img/parallax/layer_003.png').parallax__layer-img
+        .parallax__layer
+          img(src='assets/img/parallax/layer_002.png').parallax__layer-img
+        .parallax__layer
+          img(src='assets/img/parallax/layer_001.png').parallax__layer-img
+      header.header
+        .authorize
+          a(class='authorize_div', href='')
+            span.authorize_div-text Authorize
+      section
+        .flip
+          .flip_front
+            .flip-avatar
+              img(src='/assets/img/ava.jpg').flip-ava-img
+            h2.flip-name Oleg Korolko
+            p.flip-text Personal Website of Web Developer
+            nav
+              ul.menu
+                li.menu-elem.menu-elem-1
+                  a(class='menu-elem-link', href='/works')
+                    span.menu-elem-text Works
+                li.menu-elem.menu-elem-2
+                  a(class='menu-elem-link', href='/aboutme')
+                    span.menu-elem-text About
+                li.menu-elem.menu-elem-3
+                  a(class='menu-elem-link', href='/blog')
+                    span.menu-elem-text Blog
+            .index-icons
+              .index-icons__container
+                .index-icons__elem
+                  a(class='', href='http://vk.com/id82593')
+                    #index-vk
+                .index-icons__elem
+                  a(class='', href='http://linkedin.com')
+                    #index-in
+                .index-icons__elem
+                  a(class='', href='https://github.com/olegk101')
+                    #index-github
+          .flip_back
+            h2.flip_back__header Authorize
+            form.auth_form
+              .auth_div
+                span.auth_span
+                  i(class='fa fa-user').auth_span_icon
+                input(type='text' name='name' placeholder='Login').auth_input#index_login
+              .auth_div
+                span.auth_span
+                  i(class='fa fa-key').auth_span_icon
+                input(type='password' name='password' placeholder='Password').auth_input#index_pass
+              .isHuman.checkbox
+                label.fancy-checkbox
+                  input(type='checkbox')#isHuman
+                  span.checkbox_span I am human
+              .auth_radio_container
+                span.notRobot Are you sure?
+                .auth_radio_buttons
+                  input(type='radio', name='option', id='radio1').auth_radio_buttons_left
+                  label(for='radio1').auth_radio_buttons_left Yes
+                  input(type='radio', name='option', id='radio2').auth_radio_buttons_right
+                  label(for='radio2' 'checked').auth_radio_buttons_right No
+              nav
+                ul.menu
+                  li.menu-elem.menu-elem-auth-1
+                    button.menu-elem-link.menu-elem#backToMain Back to Main
+                  li.menu-elem.menu-elem-auth-2
+                    button.menu-elem-link.menu-elem#authorize Login
+      footer.footer-welcome
+        p.footer-welcome-text Oleg Korolko | 2016

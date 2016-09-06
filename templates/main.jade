@@ -1,0 +1,47 @@
+doctype html
+html(lang='ru-RU')
+  include common/_head
+  body
+    <!--[if lt IE 9]>
+    <p class="browsehappy">You use <strong>an old</strong> browser. Please <a href="http://browsehappy.com/">update it</a></p>
+    <![endif]-->
+    .preloader_container
+      .preloader
+        .outer-circle
+        .middle-circle
+        .inner-circle
+        .preloader_text 0
+    .wrapper
+      .first-screen
+        .parallax-scroll
+          .parallax-scroll__layer
+            img(src='assets/img/parallax/layer_009.jpg').parallax-scroll__layer-img
+          .parallax-scroll__layer
+            img(src='assets/img/parallax/layer_008.png').parallax-scroll__layer-img
+          .parallax-scroll__layer
+            img(src='assets/img/parallax/layer_007.png').parallax-scroll__layer-img
+          .parallax-scroll__layer
+            img(src='assets/img/parallax/layer_006.png').parallax-scroll__layer-img
+          .parallax-scroll__layer
+            img(src='assets/img/parallax/layer_005.png').parallax-scroll__layer-img
+          .parallax-scroll__layer
+            img(src='assets/img/parallax/layer_004.png').parallax-scroll__layer-img
+          .parallax-scroll__layer
+            img(src='assets/img/parallax/layer_003.png').parallax-scroll__layer-img
+          .parallax-scroll__layer
+            img(src='assets/img/parallax/layer_002.png').parallax-scroll__layer-img
+          .parallax-scroll__layer
+            img(src='assets/img/parallax/layer_001.png').parallax-scroll__layer-img
+        include common/_header
+        section.main
+          .avatar
+            img(src='/assets/img/ava.jpg').ava-image
+          h1.name Oleg Korolko
+          p.text Personal Website of Web Developer
+        .arrow-down
+          a(class='arrow-down-link', href='#')
+            svg.arrow-down-icon
+              use(xlink:href='assets/img/icons/arrow_down.svg#arrow_down')
+        block title
+      block content
+    include common/_footer

@@ -1,0 +1,20 @@
+extends main
+block title
+  svg(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 1000 85', preserveaspectratio='none').blog_triangle
+    polygon(points='0,0   0,86   500.8,86   500.8,75.5')#blog_triangle_left
+    polygon(points='1000,0   1000,86   500,86   500,75.5')#blog_triangle_right
+block content
+  section.blog-container
+    aside.blog-menu
+      ul.blog-menu-list
+        each item, index in posts
+          li.blog-menu-elem(data-id= index, id='item#{index}')
+            .blog-menu-elem-inner #{item.title}
+    .blog-content
+        each item, index in posts
+            .blog-article
+                h2.blog-article-header #{item.title}
+                span.blog-article-date #{item.date}
+                .blog-article-content.
+                    #{item.content}
+
