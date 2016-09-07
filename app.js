@@ -64,9 +64,9 @@ app.use(sassMiddleware({
 // middleware
 app.use(require('./middleware/sendHttpError'));
 
-app.use(require('./middleware/LoadUser')); 
+app.use(require('./middleware/loadUser'));
 
-app.use(require('./middleware/LoadData')); 
+app.use(require('./middleware/loadData'));
 
 // routes
 require('./routes')(app); 
