@@ -73,7 +73,7 @@ require('./routes')(app);
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-//--------------------  обработка ошибки  ------------------//
+//--------------------  error handler  ------------------//
 var  HttpError = require('./error/').HttpError;
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
